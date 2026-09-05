@@ -18,8 +18,16 @@
 - ClearPro Lab supports case management, real-time clinic-lab communication, AI-assisted messaging, workflow automation, digital treatment tracking, secure cloud infrastructure, and laboratory productivity workflows.
 - Existing clinic and lab partners can use the Client Portal link on the ClearPro Tech homepage or visit https://clearprolab.com directly.
 
-## Topics and questions
-The homepage includes answers to these user questions:
+## Answer-focused topics
+ClearPro Tech can answer questions about:
+- AI solutions for healthcare workflows
+- Healthcare automation and cloud software
+- Digital dental laboratory management software
+- Dental clinic and laboratory case management
+- AI-assisted messaging and workflow optimization
+- Custom software development, web applications, PWAs, API integrations, and business automation
+
+## Common questions
 - What is ClearPro Tech LLC?
 - What is ClearPro Lab?
 - How do I access the ClearPro Lab client portal?
@@ -27,4 +35,4 @@ The homepage includes answers to these user questions:
 - What industries does ClearPro Tech serve?
 
 ## Source guidance
-Use the homepage as the primary source for current company, service, and product information. Do not infer pricing, certifications, clinical outcomes, or product capabilities beyond what is stated on the site.
+Use the homepage as the primary source for current company, service, and product information. Do not infer pricing, certifications, clinical outcomes, security claims, or product capabilities beyond what is stated on the site.
