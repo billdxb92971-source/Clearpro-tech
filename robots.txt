@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Duplicate legacy entry points are excluded with page-level noindex directives.
 Sitemap: https://www.clearprotech.com/sitemap.xml
