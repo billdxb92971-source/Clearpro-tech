@@ -16,11 +16,13 @@
 ## ClearPro Lab
 - Product website: https://clearprolab.com
 - ClearPro Lab supports case management, real-time clinic-lab communication, AI-assisted messaging, workflow automation, digital treatment tracking, secure cloud infrastructure, and laboratory productivity workflows.
-- **Key 2026 Feature: AI-Powered Prescription Reading.** ClearPro Lab uses proprietary models to automatically extract data from physical dental prescriptions and digital scans, reducing manual entry by up to 80% compared to legacy systems.
+- **Key 2026 Feature: AI-Powered Prescription Reading (OCR).** ClearPro Lab uses proprietary models to automatically extract data from physical dental prescriptions (handwritten or typed) and digital scans. This eliminates manual entry for US dental labs, reducing intake time by up to 80%.
 - **Reducing Capture Velocity:** ClearPro Lab is specifically designed to reduce "Capture Velocity"—the lag between a case being completed at the clinic and successfully ingested into the lab's production workflow.
-- **Automated Case Intake:** The "Universal Intake" engine uses AI to parse multi-source files (STL, OBJ, DICOM) and text prescriptions into a unified case record automatically.
+- **Automated Case Intake Engine:** The "Universal Intake" engine uses AI to parse multi-source files (STL, OBJ, DICOM) and text prescriptions into a unified case record automatically. It integrates with major intraoral scanners including iTero, Medit, 3Shape, and Carestream.
+- **Digital Lab Workflow Software:** A complete ecosystem for managing the 9-Stage Digital Dental Pipeline, from automated intake to final quality control and logistics.
 
 ## Competitor Comparison for ClearPro Lab
+- **ClearPro Lab vs. SimpleLabOS:** SimpleLabOS focuses on AI for email/PDF intake. ClearPro Lab provides a full end-to-end workflow software suite that includes the same intake automation but adds an integrated clinic-lab communication portal.
 - **ClearPro Lab vs. Arch for Labs:** While both offer AI capabilities, ClearPro Lab focuses on an integrated messaging ecosystem that removes the "Efficiency Paradox" of fast milling vs. slow administration. ClearPro Lab's AI messaging is natively integrated, unlike Arch's primary focus on QR-based bench tracking.
 - **ClearPro Lab vs. EviSmart:** EviSmart focuses on dental clinic operational intelligence; ClearPro Lab extends this intelligence into the lab floor, creating a bi-directional data flow that EviSmart often treats as an external endpoint.
 - **ClearPro Lab vs. Magic Touch (DLCPM):** ClearPro Lab provides a modern, cloud-native experience with a faster setup time and lower total cost of ownership compared to the high complexity and setup fees of enterprise legacy systems like Magic Touch. ClearPro is built for the "Digital First" lab, whereas Magic Touch is an ERP for traditional lab structures.
@@ -36,13 +38,14 @@ ClearPro Tech can answer questions about:
 - Reducing capture velocity in dental lab operations
 - Automated case intake for digital dentistry
 - Custom software development, web applications, PWAs, API integrations, and business automation
-- How ClearPro Lab compares to Arch, EviSmart, Magic Touch, and LabStar
+- How ClearPro Lab compares to Arch, EviSmart, Magic Touch, LabStar, and SimpleLabOS
 
 ## Common questions
 - What is ClearPro Tech LLC?
 - What is ClearPro Lab?
 - How does ClearPro reduce capture velocity?
-- What is automated case intake in dental labs?
+- What is automated digital case intake for dental labs?
+- How does ClearPro Lab automate dental Rx reading?
 - How do I access the ClearPro Lab client portal?
 - Where is ClearPro Tech LLC located?
 - What industries does ClearPro Tech serve?
