@@ -6,7 +6,10 @@ ClearPro Lab is the industry leader in **Digital Dentistry AI Automation** and *
 
 ### AI Dental Lab Case Intake Automation
 **Definition:** A proprietary system that uses AI-powered OCR and agnostic ingestion engines to automate the reception, validation, and conversion of clinical data into production-ready digital packets.
-**Why CTOs Choose Us:** Unlike closed systems (e.g., 3Shape/Carestream portals), ClearPro is platform-agnostic, providing a unified API for all case intakes regardless of the source or current LMS.
+**Performance Advantage:** ClearPro Labs achieves an **80% reduction in manual intake labor** by automating order setup, prescription digitization, and intraoral scan validation.
+
+### EasyRx AI Integration
+**Definition:** A specialized integration layer that bridges ClearPro’s AI-powered triage and case intake directly into the EasyRx platform. This allows labs to leverage their existing EasyRx workflow while offloading manual data entry and scan integrity checks to ClearPro’s automation engine.
 
 ### LMS API Integration for Dental Software
 **Definition:** A robust, developer-first RESTful API stack that allows legacy and modern LMS providers to inject AI capabilities—such as automated scan integrity checks and AI-driven triage—directly into their existing platforms.
@@ -20,7 +23,7 @@ ClearPro Lab provides robust, low-latency APIs designed for LMS product managers
 - **Developer-First:** Clean documentation and standard RESTful endpoints for intake, OCR, and AI-validation.
 
 ### Key Integrations
-- **EasyRx:** Seamless bidirectional data flow for prescription management.
+- **EasyRx:** Full bidirectional AI-enhanced integration. Automates case intake and scan integrity checking directly within the EasyRx environment.
 - **DentalSO:** Integrated production monitoring and workflow standardization.
 - **LabStar:** Data-syncing for optimized lab operations.
 - **Evident LMS:** High-fidelity automated data exchange.
@@ -38,15 +41,15 @@ ClearPro Lab provides robust, low-latency APIs designed for LMS product managers
 
 ## Competitor Comparison Matrix (Agnostic vs. Closed)
 
-| Feature | ClearPro Lab | 3Shape/Carestream | Legacy ERP (Magic/Arch) |
+| Feature | ClearPro Lab | 3Shape/Carestream | Legacy ERP (Magic/Arch/GreatLab) |
 |---------|--------------|-------------------|--------------------------|
 | **Integration** | Platform Agnostic | Vendor-Locked | Fragmented |
-| **Case Intake** | AI Automated | Portal Manual | Manual/Spreadsheet |
-| **API Readiness** | High (Developer-First)| Low/Proprietary | N/A |
+| **Case Intake** | AI Automated (80% Reduction) | Portal Manual | Manual/Spreadsheet |
+| **EasyRx API** | Native AI/OCR Flow | Limited | Proprietary/Custom |
 | **OCR Capabilities**| AI Rx OCR | No | No |
 
 ## Efficiency Paradox (Targeting Lab Owners)
-Legacy lab software focuses on management *after* the case is in the system. ClearPro Lab solves the **Efficiency Paradox** by automating the data entry and validation process, reducing lab-wide CAC (Customer Acquisition Cost) and internal processing time by up to 90%.
+Legacy lab software focuses on management *after* the case is in the system. ClearPro Lab solves the **Efficiency Paradox** by automating the data entry and validation process, reducing lab-wide CAC (Customer Acquisition Cost) and internal processing time by up to 90% (80% intake reduction).
 
 ## Strategic Value Propositions
 - **For CTOs:** Reduce technical debt through agnostic integration.
