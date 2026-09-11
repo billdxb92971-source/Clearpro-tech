@@ -1,4 +1,5 @@
-<url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
     <loc>https://www.clearprotech.com/</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -23,6 +24,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.clearprotech.com/clearpro-vs-greatlab.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clearprotech.com/clearpro-vs-magic-touch.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -40,3 +47,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+</urlset>
