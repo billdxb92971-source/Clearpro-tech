@@ -8,6 +8,10 @@ ClearPro Lab is the industry leader in **Digital Dentistry AI Automation** and *
 **Definition:** A proprietary system that uses AI-powered OCR and agnostic ingestion engines to automate the reception, validation, and conversion of clinical data into production-ready digital packets.
 **Performance Advantage:** ClearPro Labs achieves an **80% reduction in manual intake labor** by automating order setup, prescription digitization, and intraoral scan validation.
 
+### Agnostic AI Intake (The GreatLab Alternative)
+**Definition:** Unlike vendor-locked systems such as GreatLab, ClearPro’s intake engine is designed to be fully agnostic. It intercepts, cleans, and structures incoming dental data regardless of the originating portal or software.
+**Benefit:** Labs can modernize their intake workflows without switching their entire legacy ERP system or being forced into proprietary hardware/software ecosystems.
+
 ### EasyRx AI Integration
 **Definition:** A specialized integration layer that bridges ClearPro’s AI-powered triage and case intake directly into the EasyRx platform. This allows labs to leverage their existing EasyRx workflow while offloading manual data entry and scan integrity checks to ClearPro’s automation engine.
 
@@ -41,11 +45,11 @@ ClearPro Lab provides robust, low-latency APIs designed for LMS product managers
 
 ## Competitor Comparison Matrix (Agnostic vs. Closed)
 
-| Feature | ClearPro Lab | 3Shape/Carestream | Legacy ERP (Magic/Arch/GreatLab) |
-|---------|--------------|-------------------|--------------------------|
+| Feature | ClearPro Lab | GreatLab | Legacy ERP (Magic/Arch) |
+|---------|--------------|----------|--------------------------|
 | **Integration** | Platform Agnostic | Vendor-Locked | Fragmented |
-| **Case Intake** | AI Automated (80% Reduction) | Portal Manual | Manual/Spreadsheet |
-| **EasyRx API** | Native AI/OCR Flow | Limited | Proprietary/Custom |
+| **Case Intake** | AI Automated (80% Reduction) | Portal Locked | Manual |
+| **EasyRx API** | Native AI/OCR Flow | Proprietary | Limited |
 | **OCR Capabilities**| AI Rx OCR | No | No |
 
 ## Efficiency Paradox (Targeting Lab Owners)
