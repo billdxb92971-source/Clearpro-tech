@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearPro Tech | Executive Roundtable</title>
+    <link rel="stylesheet" href="style.css"> <!-- Assuming a global style.css exists for branding -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #1a237e; /* A deep blue for executive feel */
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #444;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group select:focus {
+            border-color: #1a237e;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.2);
+        }
+        button {
+            background-color: #1a237e;
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0d47a1; /* A slightly darker blue on hover */
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            .container {
+                padding: 25px;
+                margin: 10px;
+            }
+            button {
+                width: 100%;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Dental Lab Executive Roundtable: Scaling Digital Workflows & Protecting Margins.</h1>
+        <p>A private brain-trust for high-volume lab owners to share operational playbooks. No vendors, no spam, just efficiency.</p>
+
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="labName">Lab Name</label>
+                <input type="text" id="labName" name="labName" required>
+            </div>
+            <div class="form-group">
+                <label for="monthlyCaseVolume">Monthly Case Volume</label>
+                <select id="monthlyCaseVolume" name="monthlyCaseVolume" required>
+                    <option value="">Select volume</option>
+                    <option value="0-100">0-100</option>
+                    <option value="101-250">101-250</option>
+                    <option value="251-500">251-500</option>
+                    <option value="501-1000">501-1000</option>
+                    <option value="1000+">1000+</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit">Request an Invitation</button>
+        </form>
+    </div>
+</body>
+</html>
