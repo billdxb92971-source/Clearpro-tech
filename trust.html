@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trust & Security Portal - ClearPro Tech</title>
+    <meta name="description" content="ClearPro Tech's commitment to trust and security, including SOC2, Uptime SLA, US-Only Data Residency, and HIPAA compliance.">
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --light-grey-bg: #f8f9fa;
+            --dark-grey-text: #343a40;
+            --button-hover-blue: #004085;
+            --white: #ffffff;
+            --border-color: #dee2e6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-grey-bg);
+            color: var(--dark-grey-text);
+        }
+        .container {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+        header h1 {
+            color: var(--primary-blue);
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.1em;
+            color: #555;
+        }
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .pillar-item {
+            background-color: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pillar-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+        .pillar-item h2 {
+            color: var(--primary-blue);
+            font-size: 1.6em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .pillar-item p {
+            font-size: 1em;
+            color: #666;
+            line-height: 1.7;
+        }
+        .cta-section {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: var(--button-hover-blue);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            .pillar-grid {
+                grid-template-columns: 1fr;
+            }
+            .pillar-item h2 {
+                font-size: 1.4em;
+            }
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+            .pillar-item {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Trust & Security Portal</h1>
+            <p>Our unwavering commitment to securing your data and ensuring the highest standards of operational excellence.</p>
+        </header>
+
+        <div class="pillar-grid">
+            <div class="pillar-item">
+                <h2>SOC2 Type 1 Compliance</h2>
+                <p><strong>Target: Q4 2025</strong><br>We are actively working towards achieving SOC2 Type 1 compliance, demonstrating our commitment to managing customer data based on the five trust service principles: security, availability, processing integrity, confidentiality, and privacy.</p>
+            </div>
+            <div class="pillar-item">
+                <h2>99.9% Uptime SLA Guarantee</h2>
+                <p>Our service level agreement (SLA) guarantees an impressive 99.9% uptime, ensuring your operations run smoothly and reliably with minimal disruption. We are dedicated to maintaining the highest availability for our critical services.</p>
+            </div>
+            <div class="pillar-item">
+                <h2>US-Only Data Residency</h2>
+                <p>All ClearPro Tech customer data is securely hosted within the United States, specifically on AWS US-East servers. This commitment ensures data sovereignty and adherence to US data protection regulations, providing peace of mind for our clients.</p>
+            </div>
+            <div class="pillar-item">
+                <h2>HIPAA Compliance & BAA Readiness</h2>
+                <p>ClearPro Tech is built with HIPAA compliance in mind, ensuring the protection of sensitive health information. We are fully prepared to enter into Business Associate Agreements (BAAs) with our partners, upholding the highest standards of privacy and security.</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <p>Ready to learn more about our security practices?</p>
+            <a href="/contact.html" class="cta-button">Request Trust Packet</a>
+        </div>
+    </div>
+</body>
+</html>
