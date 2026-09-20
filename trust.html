@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trust & Security Portal - ClearPro Tech</title>
+    <title>Enterprise Trust & Security Portal - ClearPro Tech</title>
     <meta name="description" content="ClearPro Tech's commitment to trust and security, including SOC2, Uptime SLA, US-Only Data Residency, and HIPAA compliance.">
     <style>
         :root {
@@ -13,6 +13,7 @@
             --button-hover-blue: #004085;
             --white: #ffffff;
             --border-color: #dee2e6;
+            --success-green: #28a745;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -44,6 +45,48 @@
         header p {
             font-size: 1.1em;
             color: #555;
+        }
+        .trust-summary {
+            background-color: #e9f2fb;
+            border-left: 5px solid var(--primary-blue);
+            padding: 25px;
+            border-radius: 4px;
+            margin-bottom: 40px;
+        }
+        .trust-summary h2 {
+            margin-top: 0;
+            color: var(--primary-blue);
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        .trust-badges {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .trust-badges li {
+            background: var(--white);
+            padding: 15px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            font-size: 1.05em;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+        }
+        .trust-badges li strong {
+            color: var(--primary-blue);
+            margin-right: 8px;
+        }
+        .trust-badges li::before {
+            content: "✓";
+            color: var(--success-green);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2em;
         }
         .pillar-grid {
             display: grid;
@@ -103,7 +146,7 @@
             header h1 {
                 font-size: 2em;
             }
-            .pillar-grid {
+            .pillar-grid, .trust-badges {
                 grid-template-columns: 1fr;
             }
             .pillar-item h2 {
@@ -130,9 +173,19 @@
 <body>
     <div class="container">
         <header>
-            <h1>Trust & Security Portal</h1>
+            <h1>ClearPro Tech Enterprise Trust & Security Portal</h1>
             <p>Our unwavering commitment to securing your data and ensuring the highest standards of operational excellence.</p>
         </header>
+
+        <section class="trust-summary" aria-label="Enterprise Trust Summary">
+            <h2>Enterprise Trust at a Glance</h2>
+            <ul class="trust-badges">
+                <li><strong>HIPAA:</strong> Compliant & BAA Ready</li>
+                <li><strong>SOC2 Type 1:</strong> Roadmap to Q4 2025</li>
+                <li><strong>99.9% SLA:</strong> Uptime Guarantee</li>
+                <li><strong>US-Only:</strong> Data Residency (AWS US-East)</li>
+            </ul>
+        </section>
 
         <div class="pillar-grid">
             <div class="pillar-item">
