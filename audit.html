@@ -3,10 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infrastructure Audit Calculator | ClearPro Tech</title>
-    <meta name="description" content="Calculate your dental lab's annual labor waste and potential capacity increase with ClearPro Tech's Infrastructure Audit Calculator.">
+    <title>Dental Lab ROI Calculator | Automate & Optimize Infrastructure</title>
+    <meta name="description" content="Use our dental lab ROI calculator to uncover hidden administrative costs. Maximize your digital workflow efficiency and calculate your automated case intake ROI.">
     <!-- Canonical tag -->
     <link rel="canonical" href="https://www.clearprotech.com/audit.html">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Dental Lab ROI Calculator | ClearPro Tech">
+    <meta property="og:description" content="Calculate your dental lab's annual labor waste and potential capacity increase with our automated case intake ROI calculator.">
+    <meta property="og:url" content="https://www.clearprotech.com/audit.html">
+    <meta property="og:type" content="website">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.clearprotech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "ROI Calculator",
+              "item": "https://www.clearprotech.com/audit.html"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How to reduce dental lab administrative costs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The most effective way to reduce dental lab administrative costs is by eliminating manual data entry through automated intake portals. By integrating your scanners and design software, you can remove the need for staff to manually download files and input prescriptions, instantly improving your digital workflow efficiency."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does manual data entry cost a dental lab?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Depending on case volume and staff hourly rates, manual data entry can cost a mid-sized dental lab tens of thousands of dollars annually. As shown in our dental lab labor cost calculator, spending just 15 minutes per case can quickly amount to massive annual labor waste that could otherwise be invested in production or new technology."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Dental Lab ROI Calculator",
+          "operatingSystem": "All",
+          "applicationCategory": "BusinessApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    }
+    </script>
     <style>
         :root {
             --primary-blue: #0056b3;
@@ -32,26 +96,79 @@
             margin: 40px auto;
             padding: 20px;
         }
+        
+        /* Breadcrumbs */
+        .breadcrumbs {
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+        .breadcrumbs a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumbs span {
+            color: #6c757d;
+        }
+
+        /* Typography & Content Sections */
         header {
             text-align: center;
-            padding-bottom: 30px;
+            padding-bottom: 20px;
             margin-bottom: 30px;
         }
         header h1 {
             color: var(--primary-blue);
             font-size: 2.8em;
             margin-bottom: 10px;
+            line-height: 1.2;
         }
-        header p {
-            font-size: 1.2em;
+        .intro-text {
+            font-size: 1.1em;
             color: #555;
-            max-width: 700px;
-            margin: 0 auto;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            text-align: center;
         }
+        .content-section {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .content-section h2 {
+            color: var(--primary-blue);
+            margin-top: 0;
+            border-bottom: 2px solid var(--light-grey-bg);
+            padding-bottom: 10px;
+        }
+        .content-section p {
+            margin-bottom: 15px;
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h3 {
+            font-size: 1.2em;
+            color: var(--dark-grey-text);
+            margin-bottom: 5px;
+        }
+        .faq-item p {
+            margin-top: 0;
+            color: #555;
+        }
+
+        /* Calculator Styles */
         .calculator-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
+            margin-bottom: 40px;
         }
         .card {
             background-color: var(--white);
@@ -138,7 +255,6 @@
 
         /* Form */
         .lead-form {
-            margin-top: 40px;
             background-color: var(--white);
             padding: 40px;
             border-radius: 8px;
@@ -149,6 +265,7 @@
             color: var(--primary-blue);
             margin-top: 0;
             margin-bottom: 10px;
+            border: none;
         }
         .lead-form p {
             margin-bottom: 25px;
@@ -193,80 +310,130 @@
             header h1 {
                 font-size: 2.2em;
             }
+            .result-value {
+                font-size: 2.5em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Infrastructure Audit Calculator</h1>
-            <p>Uncover the hidden costs of manual case intake. See exactly how much labor waste you can eliminate and capacity you can unlock with ClearPro Tech.</p>
-        </header>
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="breadcrumb">
+            <a href="/">Home</a> &gt; <span>ROI Calculator</span>
+        </nav>
 
-        <div class="calculator-grid">
-            <!-- Inputs -->
-            <div class="card">
-                <h2>Your Lab's Metrics</h2>
-                
-                <div class="input-group">
-                    <label>
-                        Monthly Case Volume
-                        <span class="val-display" id="val-volume">5,000 cases</span>
-                    </label>
-                    <input type="range" id="volRange" min="100" max="50000" step="100" value="5000">
+        <main>
+            <article>
+                <header>
+                    <h1>Dental Lab ROI Calculator: Optimize Your Infrastructure</h1>
+                    <p class="intro-text">
+                        Are you maximizing your <strong>digital workflow efficiency</strong> or losing critical margins to administrative overhead? Our <strong>dental lab ROI calculator</strong> helps you uncover the hidden costs of manual case intake. See exactly how much labor waste you can eliminate and capacity you can unlock when you transition to automated infrastructure with ClearPro Tech. Use the <strong>dental lab labor cost calculator</strong> below to evaluate your current baseline.
+                    </p>
+                </header>
+
+                <div class="calculator-grid">
+                    <!-- Inputs -->
+                    <div class="card">
+                        <h2>Your Lab's Metrics</h2>
+                        
+                        <div class="input-group">
+                            <label>
+                                Monthly Case Volume
+                                <span class="val-display" id="val-volume">5,000 cases</span>
+                            </label>
+                            <input type="range" id="volRange" min="100" max="50000" step="100" value="5000">
+                        </div>
+
+                        <div class="input-group">
+                            <label>
+                                Avg. Manual Intake Time (per case)
+                                <span class="val-display" id="val-time">15 mins</span>
+                            </label>
+                            <input type="range" id="timeRange" min="1" max="30" step="1" value="15">
+                        </div>
+
+                        <div class="input-group">
+                            <label>
+                                Admin/Tech Hourly Rate
+                                <span class="val-display" id="val-rate">$25 / hr</span>
+                            </label>
+                            <input type="range" id="rateRange" min="15" max="75" step="1" value="25">
+                        </div>
+                    </div>
+
+                    <!-- Outputs -->
+                    <div class="card" style="background-color: #f0f7ff; border: 1px solid #cce3ff;">
+                        <h2>Your Infrastructure Audit</h2>
+                        
+                        <div class="result-item">
+                            <h3>Annual Labor Waste</h3>
+                            <div class="result-value" id="res-waste">$0</div>
+                        </div>
+
+                        <div class="result-item">
+                            <h3>Potential Capacity Increase (Monthly)</h3>
+                            <div class="result-value" id="res-capacity" style="color: var(--success-green);">+ 0 cases</div>
+                            <div style="font-size: 0.9em; color: #666; margin-top: 5px;">Assuming 90% intake time reduction</div>
+                        </div>
+
+                        <div class="result-item">
+                            <h3>'Capture Velocity' Score</h3>
+                            <div id="res-score" class="score-indicator score-warning">Warning</div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="input-group">
-                    <label>
-                        Avg. Manual Intake Time (per case)
-                        <span class="val-display" id="val-time">15 mins</span>
-                    </label>
-                    <input type="range" id="timeRange" min="1" max="30" step="1" value="15">
-                </div>
+                <section class="content-section">
+                    <h2>What is Capture Velocity in Dental Labs?</h2>
+                    <p>
+                        Capture velocity measures the speed and accuracy with which a dental lab receives, processes, and prepares digital scans for production. In today's highly competitive market, high capture velocity is the cornerstone of <strong>digital workflow efficiency</strong>. When technicians or administrative staff spend 15 to 30 minutes manually downloading intraoral scans, matching prescriptions, and organizing patient folders, your capture velocity drops to critical levels.
+                    </p>
+                    <p>
+                        By automating these front-end processes, labs drastically improve their <strong>automated case intake ROI</strong>. High capture velocity means cases move from the doctor's scanner directly into your design software's queue in seconds, not hours. This operational speed ensures faster turnaround times, happier clinicians, and optimized infrastructure.
+                    </p>
+                </section>
 
-                <div class="input-group">
-                    <label>
-                        Admin/Tech Hourly Rate
-                        <span class="val-display" id="val-rate">$25 / hr</span>
-                    </label>
-                    <input type="range" id="rateRange" min="15" max="75" step="1" value="25">
-                </div>
-            </div>
+                <section class="content-section">
+                    <h2>The Economic Cost of Manual Scan Intake</h2>
+                    <p>
+                        Every minute spent on manual file management translates directly to lost revenue. Utilizing our <strong>dental lab ROI calculator</strong> reveals a startling reality for many growing businesses: manual case entry is scaling costs linearly alongside growth. If a lab receives 1,000 cases per month and spends just 10 minutes manually processing each one, that equals over 160 hours of labor monthly—equivalent to a full-time employee doing nothing but data entry.
+                    </p>
+                    <p>
+                        The true dental lab labor cost isn't just the hourly wage; it's the lost opportunity. Highly skilled CAD technicians should be designing restorations, not hunting for missing STL files or clarifying handwritten Rx forms. Upgrading your systems to achieve high automated case intake ROI eliminates this bottleneck, turning administrative waste into actionable production capacity.
+                    </p>
+                </section>
 
-            <!-- Outputs -->
-            <div class="card" style="background-color: #f0f7ff; border: 1px solid #cce3ff;">
-                <h2>Your Infrastructure Audit</h2>
-                
-                <div class="result-item">
-                    <h3>Annual Labor Waste</h3>
-                    <div class="result-value" id="res-waste">$0</div>
-                </div>
+                <section class="content-section">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-item">
+                        <h3>How to reduce dental lab administrative costs?</h3>
+                        <p>
+                            The most effective way to reduce dental lab administrative costs is by eliminating manual data entry through automated intake portals. By integrating your scanners and design software, you can remove the need for staff to manually download files and input prescriptions, instantly improving your digital workflow efficiency.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How much does manual data entry cost a dental lab?</h3>
+                        <p>
+                            Depending on case volume and staff hourly rates, manual data entry can cost a mid-sized dental lab tens of thousands of dollars annually. As shown in our <strong>dental lab labor cost calculator</strong>, spending just 15 minutes per case can quickly amount to massive annual labor waste that could otherwise be invested in production or new technology.
+                        </p>
+                    </div>
+                </section>
 
-                <div class="result-item">
-                    <h3>Potential Capacity Increase (Monthly)</h3>
-                    <div class="result-value" id="res-capacity" style="color: var(--success-green);">+ 0 cases</div>
-                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">Assuming 90% intake time reduction</div>
+                <div class="lead-form">
+                    <h2>Download Full Infrastructure Report</h2>
+                    <p>Get a detailed, customized breakdown of your lab's automation ROI and workflow transformation.</p>
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Report requested! (Demo)');">
+                        <div class="form-grid">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="text" name="lab_name" placeholder="Lab Name" required>
+                            <input type="email" name="email" placeholder="Work Email" required>
+                        </div>
+                        <button type="submit" class="cta-button">Download Full Report</button>
+                    </form>
                 </div>
-
-                <div class="result-item">
-                    <h3>'Capture Velocity' Score</h3>
-                    <div id="res-score" class="score-indicator score-warning">Warning</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="lead-form">
-            <h2>Download Full Infrastructure Report</h2>
-            <p>Get a detailed, customized breakdown of your lab's automation ROI and workflow transformation.</p>
-            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Report requested! (Demo)');">
-                <div class="form-grid">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="text" name="lab_name" placeholder="Lab Name" required>
-                    <input type="email" name="email" placeholder="Work Email" required>
-                </div>
-                <button type="submit" class="cta-button">Download Full Report</button>
-            </form>
-        </div>
+            </article>
+        </main>
     </div>
 
     <script>
