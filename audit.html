@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure Audit Calculator | ClearPro Tech</title>
+    <meta name="description" content="Calculate your dental lab's annual labor waste and potential capacity increase with ClearPro Tech's Infrastructure Audit Calculator.">
+    <!-- Canonical tag -->
+    <link rel="canonical" href="https://www.clearprotech.com/audit.html">
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --light-grey-bg: #f8f9fa;
+            --dark-grey-text: #343a40;
+            --button-hover-blue: #004085;
+            --white: #ffffff;
+            --border-color: #dee2e6;
+            --success-green: #28a745;
+            --warning-yellow: #ffc107;
+            --danger-red: #dc3545;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-grey-bg);
+            color: var(--dark-grey-text);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            color: var(--primary-blue);
+            font-size: 2.8em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .card {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+        }
+        .card h2 {
+            margin-top: 0;
+            color: var(--primary-blue);
+            font-size: 1.5em;
+            border-bottom: 2px solid var(--light-grey-bg);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        /* Sliders */
+        .input-group {
+            margin-bottom: 25px;
+        }
+        .input-group label {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .val-display {
+            color: var(--primary-blue);
+            font-size: 1.1em;
+        }
+        input[type=range] {
+            width: 100%;
+            -webkit-appearance: none;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            cursor: pointer;
+            margin-top: -6px;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+        input[type=range]:focus {
+            outline: none;
+        }
+        /* Results */
+        .result-item {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .result-item h3 {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .result-value {
+            font-size: 3em;
+            font-weight: bold;
+            color: var(--primary-blue);
+            line-height: 1.1;
+        }
+        .score-indicator {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            color: var(--white);
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .score-critical { background-color: var(--danger-red); }
+        .score-warning { background-color: var(--warning-yellow); color: #333; }
+        .score-optimized { background-color: var(--success-green); }
+
+        /* Form */
+        .lead-form {
+            margin-top: 40px;
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+        .lead-form h2 {
+            color: var(--primary-blue);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .lead-form p {
+            margin-bottom: 25px;
+            color: #555;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .form-grid input {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 15px 30px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            max-width: 400px;
+        }
+        .cta-button:hover {
+            background-color: var(--button-hover-blue);
+        }
+
+        @media (max-width: 768px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Infrastructure Audit Calculator</h1>
+            <p>Uncover the hidden costs of manual case intake. See exactly how much labor waste you can eliminate and capacity you can unlock with ClearPro Tech.</p>
+        </header>
+
+        <div class="calculator-grid">
+            <!-- Inputs -->
+            <div class="card">
+                <h2>Your Lab's Metrics</h2>
+                
+                <div class="input-group">
+                    <label>
+                        Monthly Case Volume
+                        <span class="val-display" id="val-volume">5,000 cases</span>
+                    </label>
+                    <input type="range" id="volRange" min="100" max="50000" step="100" value="5000">
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        Avg. Manual Intake Time (per case)
+                        <span class="val-display" id="val-time">15 mins</span>
+                    </label>
+                    <input type="range" id="timeRange" min="1" max="30" step="1" value="15">
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        Admin/Tech Hourly Rate
+                        <span class="val-display" id="val-rate">$25 / hr</span>
+                    </label>
+                    <input type="range" id="rateRange" min="15" max="75" step="1" value="25">
+                </div>
+            </div>
+
+            <!-- Outputs -->
+            <div class="card" style="background-color: #f0f7ff; border: 1px solid #cce3ff;">
+                <h2>Your Infrastructure Audit</h2>
+                
+                <div class="result-item">
+                    <h3>Annual Labor Waste</h3>
+                    <div class="result-value" id="res-waste">$0</div>
+                </div>
+
+                <div class="result-item">
+                    <h3>Potential Capacity Increase (Monthly)</h3>
+                    <div class="result-value" id="res-capacity" style="color: var(--success-green);">+ 0 cases</div>
+                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">Assuming 90% intake time reduction</div>
+                </div>
+
+                <div class="result-item">
+                    <h3>'Capture Velocity' Score</h3>
+                    <div id="res-score" class="score-indicator score-warning">Warning</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lead-form">
+            <h2>Download Full Infrastructure Report</h2>
+            <p>Get a detailed, customized breakdown of your lab's automation ROI and workflow transformation.</p>
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Report requested! (Demo)');">
+                <div class="form-grid">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="text" name="lab_name" placeholder="Lab Name" required>
+                    <input type="email" name="email" placeholder="Work Email" required>
+                </div>
+                <button type="submit" class="cta-button">Download Full Report</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const volRange = document.getElementById('volRange');
+        const timeRange = document.getElementById('timeRange');
+        const rateRange = document.getElementById('rateRange');
+
+        const valVolume = document.getElementById('val-volume');
+        const valTime = document.getElementById('val-time');
+        const valRate = document.getElementById('val-rate');
+
+        const resWaste = document.getElementById('res-waste');
+        const resCapacity = document.getElementById('res-capacity');
+        const resScore = document.getElementById('res-score');
+
+        function formatCurrency(num) {
+            return '$' + num.toLocaleString('en-US', { maximumFractionDigits: 0 });
+        }
+
+        function formatNumber(num) {
+            return num.toLocaleString('en-US');
+        }
+
+        function calculate() {
+            const v = parseFloat(volRange.value);
+            const t = parseFloat(timeRange.value);
+            const r = parseFloat(rateRange.value);
+
+            // Update displays
+            valVolume.textContent = formatNumber(v) + ' cases';
+            valTime.textContent = t + ' mins';
+            valRate.textContent = '$' + r + ' / hr';
+
+            // Logic: Annual Labor Waste (Volume * (Time/60) * Rate * 12)
+            const waste = v * (t / 60) * r * 12;
+            resWaste.textContent = formatCurrency(waste);
+
+            // Logic: Potential Capacity Increase
+            const extraCases = Math.floor(v * 0.9);
+            resCapacity.textContent = '+' + formatNumber(extraCases) + ' cases';
+
+            // Logic: Capture Velocity Score
+            // < 10 mins = Optimized, 10-19 mins = Warning, >= 20 mins = Critical
+            resScore.className = 'score-indicator';
+            if (t >= 20) {
+                resScore.textContent = 'Critical';
+                resScore.classList.add('score-critical');
+            } else if (t >= 10) {
+                resScore.textContent = 'Warning';
+                resScore.classList.add('score-warning');
+            } else {
+                resScore.textContent = 'Optimized';
+                resScore.classList.add('score-optimized');
+            }
+        }
+
+        volRange.addEventListener('input', calculate);
+        timeRange.addEventListener('input', calculate);
+        rateRange.addEventListener('input', calculate);
+
+        // Initial calculation
+        calculate();
+    </script>
+</body>
+</html>
