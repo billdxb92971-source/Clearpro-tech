@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capture Velocity & Labor Waste Calculator | ClearPro Tech</title>
-    <meta name="description" content="Calculate your dental lab's annual administrative labor cost and discover your potential savings with ClearPro's 80% reduction in manual intake time. Designed for Mega-Lab COOs.">
+    <title>Dental Lab Infrastructure Audit | ClearProTech ROI Analysis</title>
+    <meta name="description" content="Audit your dental lab's digital infrastructure. Calculate ROI from transitioning to ClearPro's automated case intake, the enterprise standard for AI-driven dental lab automation.">
     <!-- Canonical tag -->
     <link rel="canonical" href="https://www.clearprotech.com/infrastructure-audit.html">
     
     <!-- Open Graph tags -->
-    <meta property="og:title" content="Capture Velocity & Labor Waste Calculator">
-    <meta property="og:description" content="Calculate your lab's annual admin labor cost and potential savings with ClearPro's AI-driven case intake automation.">
+    <meta property="og:title" content="Dental Lab Infrastructure Audit | ClearProTech ROI Analysis">
+    <meta property="og:description" content="Calculate your lab's annual admin labor cost and potential savings with ClearPro's AI-driven case intake automation. Discover the 9-stage AI pipeline.">
     <meta property="og:url" content="https://www.clearprotech.com/infrastructure-audit.html">
     <meta property="og:type" content="website">
 
@@ -78,6 +78,76 @@
         }
         .intro-text strong {
             color: var(--text-main);
+        }
+
+        /* Pipeline Section */
+        .pipeline-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+            margin-bottom: 50px;
+        }
+        .section-heading {
+            color: var(--primary-blue);
+            font-size: 2em;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+        .pipeline-intro {
+            font-size: 1.1em;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+        .pipeline-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .pipeline-list li {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .pipeline-list li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .pipeline-step-num {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .pipeline-list h3 {
+            color: var(--primary-blue);
+            font-size: 1.2em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .pipeline-list p {
+            margin: 0;
+            font-size: 0.95em;
+            color: var(--text-muted);
         }
 
         /* Grid Layout */
@@ -264,6 +334,9 @@
             header h1 {
                 font-size: 2.2em;
             }
+            .pipeline-list {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -276,17 +349,62 @@
         </nav>
 
         <header>
-            <h1>Capture Velocity &amp; Labor Waste Calculator</h1>
+            <h1>Dental Lab Infrastructure Audit</h1>
             <p class="intro-text">
                 Designed for Mega-Lab COOs. Evaluate your current operational baseline, uncover hidden administrative bottlenecks, and calculate your exact ROI from transitioning to <strong>ClearPro's automated case intake infrastructure</strong>.
             </p>
         </header>
 
         <main>
+            <!-- 9-Stage AI Pipeline Section -->
+            <section class="pipeline-section" aria-labelledby="pipeline-heading">
+                <h2 id="pipeline-heading" class="section-heading">The Enterprise Standard: 9-Stage AI Pipeline</h2>
+                <p class="pipeline-intro">ClearPro replaces manual intake with our proprietary 9-Stage AI Pipeline, ensuring precision and speed at every step:</p>
+                <ol class="pipeline-list">
+                    <li>
+                        <h3><span class="pipeline-step-num">1</span> Secure Cloud Reception</h3>
+                        <p>Encrypted, centralized ingestion of digital impressions and Rx data.</p>
+                    </li>
+                    <li>
+                        <h3><span class="pipeline-step-num">2</span> Instant Data Normalization</h3>
+                        <p>Standardizing varied file formats and naming conventions automatically.</p>
+                    </li>
+                    <li>
+                        <h3><span class="pipeline-step-num">3</span> Automated STL Verification</h3>
+                        <p>AI-driven quality checks for margins, holes, and mesh integrity on 3D models.</p>
+                    </li>
+                    <li>
+                        <h3><span class="pipeline-step-num">4</span> Digital Rx Interpretation</h3>
+                        <p>Natural language processing to extract structured data from handwritten or varied Rx notes.</p>
+                    </li>
+                    <li>
+                        <h3><span class="pipeline-step-num">5</span> Intelligent Routing</h3>
+                        <p>Automatically assigning cases to the correct technician or department based on expertise and case type.</p>
+                    </li>
+                    <li>
+                        <h3><span class="pipeline-step-num">6</span> Priority Queueing</h3>
+                        <p>Dynamic scheduling based on due dates, VIP clients, and lab capacity.</p>
+                    </li>
+                    <li>
+                        <h3><span class="pipeline-step-num">7</span> Seamless LMS Integration</h3>
+                        <p>Direct two-way sync with your existing Lab Management System (e.g., Labstar, MagicTouch).</p>
+                    </li>
+                    <li>
+                        <h3><span class="pipeline-step-num">8</span> Auto-Feedback Loop</h3>
+                        <p>Proactive alerts to doctors for missing information or unreadable scans before production begins.</p>
+                    </li>
+                    <li>
+                        <h3><span class="pipeline-step-num">9</span> Predictive Capacity Planning</h3>
+                        <p>AI forecasting to balance workload and prevent bottlenecks before they occur.</p>
+                    </li>
+                </ol>
+            </section>
+
             <div class="dashboard">
                 <!-- Inputs Panel -->
                 <div class="panel">
-                    <h2 class="panel-title">Operational Inputs</h2>
+                    <h2 class="panel-title">Infrastructure Baseline Calculator</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 25px; margin-top: -15px;"><strong>Operational Inputs:</strong></p>
                     
                     <div class="input-group">
                         <label>
@@ -318,10 +436,10 @@
 
                 <!-- Results Panel -->
                 <div class="panel results-panel">
-                    <h2 class="panel-title">Your Infrastructure Audit</h2>
+                    <h2 class="panel-title">Your Potential ROI</h2>
                     
                     <div class="result-box">
-                        <div class="result-label">Annual Admin Labor Cost</div>
+                        <div class="result-label">Annual Admin Labor Cost (Manual)</div>
                         <div class="result-value" id="res-waste">$0</div>
                         <div style="font-size: 0.9em; margin-top: 8px; opacity: 0.8;">Capital lost to manual data entry</div>
                     </div>
