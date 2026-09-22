@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture Velocity & Labor Waste Calculator | ClearPro Tech</title>
+    <meta name="description" content="Calculate your dental lab's annual administrative labor cost and discover your potential savings with ClearPro's 80% reduction in manual intake time. Designed for Mega-Lab COOs.">
+    <!-- Canonical tag -->
+    <link rel="canonical" href="https://www.clearprotech.com/infrastructure-audit.html">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Capture Velocity & Labor Waste Calculator">
+    <meta property="og:description" content="Calculate your lab's annual admin labor cost and potential savings with ClearPro's AI-driven case intake automation.">
+    <meta property="og:url" content="https://www.clearprotech.com/infrastructure-audit.html">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --primary-blue: #004085; /* Deeper enterprise blue */
+            --accent-blue: #0056b3;
+            --light-bg: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-main: #212529;
+            --text-muted: #6c757d;
+            --border-color: #dee2e6;
+            --success-green: #28a745;
+            --warning-orange: #fd7e14;
+        }
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-main);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        
+        /* Breadcrumbs */
+        .breadcrumbs {
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        .breadcrumbs a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumbs span {
+            color: var(--text-muted);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        header h1 {
+            color: var(--primary-blue);
+            font-size: 3em;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        .intro-text {
+            font-size: 1.15em;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .intro-text strong {
+            color: var(--text-main);
+        }
+
+        /* Grid Layout */
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        /* Panels */
+        .panel {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+        }
+        .panel-title {
+            color: var(--primary-blue);
+            font-size: 1.6em;
+            margin-top: 0;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+
+        /* Sliders / Inputs */
+        .input-group {
+            margin-bottom: 35px;
+        }
+        .input-group label {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-main);
+            font-size: 1.05em;
+        }
+        .val-display {
+            color: var(--accent-blue);
+            font-weight: 700;
+            background: #e9ecef;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.95em;
+        }
+        input[type=range] {
+            width: 100%;
+            -webkit-appearance: none;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            cursor: pointer;
+            margin-top: -8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            background: #ced4da;
+            border-radius: 4px;
+        }
+        input[type=range]:focus { outline: none; }
+        
+        /* Results */
+        .results-panel {
+            background: linear-gradient(135deg, #004085 0%, #0056b3 100%);
+            color: white;
+            border: none;
+        }
+        .results-panel .panel-title {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.2);
+        }
+        .result-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .result-box.highlight {
+            background: var(--card-bg);
+            color: var(--text-main);
+            border-left: 6px solid var(--success-green);
+        }
+        .result-label {
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.8);
+        }
+        .highlight .result-label {
+            color: var(--text-muted);
+        }
+        .result-value {
+            font-size: 2.8em;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+        .highlight .result-value {
+            color: var(--success-green);
+        }
+
+        /* Lead Form */
+        .lead-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 50px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        .lead-section h2 {
+            color: var(--primary-blue);
+            font-size: 2em;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .lead-section p {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .form-row input {
+            padding: 15px 20px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 1em;
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            background: #f8f9fa;
+        }
+        .form-row input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(0,86,179,0.1);
+        }
+        .btn-submit {
+            background: var(--accent-blue);
+            color: white;
+            padding: 16px 40px;
+            font-size: 1.1em;
+            font-weight: 700;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-submit:hover {
+            background: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,64,133,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+            header h1 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="breadcrumb">
+            <a href="/">Home</a> &gt; <span>Infrastructure Audit</span>
+        </nav>
+
+        <header>
+            <h1>Capture Velocity &amp; Labor Waste Calculator</h1>
+            <p class="intro-text">
+                Designed for Mega-Lab COOs. Evaluate your current operational baseline, uncover hidden administrative bottlenecks, and calculate your exact ROI from transitioning to <strong>ClearPro's automated case intake infrastructure</strong>.
+            </p>
+        </header>
+
+        <main>
+            <div class="dashboard">
+                <!-- Inputs Panel -->
+                <div class="panel">
+                    <h2 class="panel-title">Operational Inputs</h2>
+                    
+                    <div class="input-group">
+                        <label>
+                            Monthly Case Volume
+                            <span class="val-display" id="val-volume">5,000 cases</span>
+                        </label>
+                        <input type="range" id="volRange" min="500" max="50000" step="500" value="5000">
+                    </div>
+
+                    <div class="input-group">
+                        <label>
+                            Avg. Admin Time per Case (min)
+                            <span class="val-display" id="val-time">15 mins</span>
+                        </label>
+                        <input type="range" id="timeRange" min="1" max="45" step="1" value="15">
+                        <div style="font-size: 0.85em; color: var(--text-muted); margin-top: 8px;">
+                            Time spent downloading STLs, entering Rx data, and folder routing.
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>
+                            Avg. Technician Hourly Rate ($)
+                            <span class="val-display" id="val-rate">$25 / hr</span>
+                        </label>
+                        <input type="range" id="rateRange" min="15" max="100" step="1" value="25">
+                    </div>
+                </div>
+
+                <!-- Results Panel -->
+                <div class="panel results-panel">
+                    <h2 class="panel-title">Your Infrastructure Audit</h2>
+                    
+                    <div class="result-box">
+                        <div class="result-label">Annual Admin Labor Cost</div>
+                        <div class="result-value" id="res-waste">$0</div>
+                        <div style="font-size: 0.9em; margin-top: 8px; opacity: 0.8;">Capital lost to manual data entry</div>
+                    </div>
+
+                    <div class="result-box highlight">
+                        <div class="result-label">Potential Savings with ClearPro (80% Reduction)</div>
+                        <div class="result-value" id="res-savings">$0</div>
+                        <div style="font-size: 0.9em; color: var(--text-muted); margin-top: 8px;">Annual capital recovered for growth &amp; capacity</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lead Capture Form -->
+            <section class="lead-section" id="audit-form">
+                <h2>Get Your Full Audit Report</h2>
+                <p>Submit your details to receive a comprehensive, customized breakdown of your lab's automation ROI, potential capacity gains, and a strategic integration roadmap.</p>
+                
+                <form onsubmit="handleFormSubmit(event)">
+                    <div class="form-row">
+                        <input type="text" name="name" id="userName" placeholder="Full Name (e.g. John Doe, COO)" required>
+                        <input type="text" name="company" id="userCompany" placeholder="Laboratory Name" required>
+                        <input type="email" name="email" id="userEmail" placeholder="Work Email Address" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Generate Full Audit Report</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const volRange = document.getElementById('volRange');
+        const timeRange = document.getElementById('timeRange');
+        const rateRange = document.getElementById('rateRange');
+
+        const valVolume = document.getElementById('val-volume');
+        const valTime = document.getElementById('val-time');
+        const valRate = document.getElementById('val-rate');
+
+        const resWaste = document.getElementById('res-waste');
+        const resSavings = document.getElementById('res-savings');
+
+        function formatCurrency(num) {
+            return '$' + num.toLocaleString('en-US', { maximumFractionDigits: 0 });
+        }
+
+        function formatNumber(num) {
+            return num.toLocaleString('en-US');
+        }
+
+        function calculate() {
+            const v = parseFloat(volRange.value);
+            const t = parseFloat(timeRange.value);
+            const r = parseFloat(rateRange.value);
+
+            // Update Input Displays
+            valVolume.textContent = formatNumber(v) + ' cases';
+            valTime.textContent = t + ' mins';
+            valRate.textContent = '$' + r + ' / hr';
+
+            // Calculate Annual Admin Labor Cost
+            // (Monthly Volume * 12) * (Time / 60) * Hourly Rate
+            const annualVolume = v * 12;
+            const hoursPerCase = t / 60;
+            const annualLaborCost = annualVolume * hoursPerCase * r;
+            
+            resWaste.textContent = formatCurrency(annualLaborCost);
+
+            // Calculate Potential Savings (80% Reduction)
+            const potentialSavings = annualLaborCost * 0.80;
+            resSavings.textContent = formatCurrency(potentialSavings);
+        }
+
+        // Event Listeners for Sliders
+        volRange.addEventListener('input', calculate);
+        timeRange.addEventListener('input', calculate);
+        rateRange.addEventListener('input', calculate);
+
+        // Initial Calculation
+        calculate();
+
+        // Form Submission Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('userName').value;
+            const company = document.getElementById('userCompany').value;
+            
+            // Trigger Notification (Demo alert for static site)
+            alert('Thank you, ' + name + '! Your comprehensive infrastructure audit report for ' + company + ' has been generated. A member of our executive team will contact you shortly.');
+            
+            // Clear form
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
