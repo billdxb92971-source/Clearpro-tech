@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0a0e14">
 <meta name="color-scheme" content="dark">
 <title>Pricing | ClearPro Tech - Margin Recovery for Dental Labs</title>
-<meta name="description" content="ClearPro Tech pricing: Starter, Pro, and Enterprise tiers. AI scan routing for dental labs.">
+<meta name="description" content="ClearPro Tech pricing: Starter, Pro, Enterprise, and Custom tiers. AI scan routing for dental labs.">
 <link rel="icon" href="/assets/favicon.ico">
 <style>
 *{box-sizing:border-box}
@@ -49,6 +49,14 @@ img{max-width:100%;height:auto}
     position: relative;
     background: #111a24;
 }
+.pricing-card.custom {
+    border: 2px solid #f5a623;
+    position: relative;
+    background: #1a1610;
+}
+.pricing-card.custom:hover {
+    border-color: #f5a623;
+}
 .badge {
     position: absolute;
     top: -14px;
@@ -64,6 +72,10 @@ img{max-width:100%;height:auto}
     text-transform: uppercase;
     letter-spacing: 0.5px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.pricing-card.custom .badge {
+    background: #f5a623;
+    color: #0a0e14;
 }
 .price {
     font-size: 2.5rem;
@@ -96,6 +108,9 @@ img{max-width:100%;height:auto}
     color: #4ea1ff;
     font-weight: bold;
 }
+.pricing-card.custom .features li::before {
+    color: #f5a623;
+}
 .cta-button {
     display: block;
     text-align: center;
@@ -115,11 +130,17 @@ img{max-width:100%;height:auto}
 .pricing-card.enterprise .cta-button {
     background: #4ea1ff;
 }
-.pricing-card:not(.enterprise) .cta-button {
+.pricing-card.custom .cta-button {
+    background: #f5a623;
+}
+.pricing-card.custom .cta-button:hover {
+    background: #df961c;
+}
+.pricing-card:not(.enterprise):not(.custom) .cta-button {
     background: #1c2733;
     color: #fff !important;
 }
-.pricing-card:not(.enterprise) .cta-button:hover {
+.pricing-card:not(.enterprise):not(.custom) .cta-button:hover {
     background: #2a3b4c;
 }
 .roi-section {
@@ -196,6 +217,20 @@ img{max-width:100%;height:auto}
                 <li>Custom API Integrations</li>
             </ul>
             <a href="/contact" class="cta-button">Contact Sales</a>
+        </div>
+
+        <!-- Custom Tier -->
+        <div class="pricing-card custom">
+            <div class="badge">Enterprise Plus</div>
+            <h2>Custom</h2>
+            <div class="price" style="font-size: 2rem; margin: 23px 0;">Contact Sales</div>
+            <ul class="features">
+                <li><strong>Over 500 AI calls/day</strong></li>
+                <li>Bespoke LMS/ERP Integrations</li>
+                <li>Dedicated Account Manager</li>
+                <li>Custom SLAs</li>
+            </ul>
+            <a href="/contact" class="cta-button">Book a Strategy Call</a>
         </div>
     </div>
 
