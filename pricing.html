@@ -1,36 +1,221 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0a0e14"><meta name="color-scheme" content="dark"><title>Pricing | ClearPro Tech - Margin Recovery for Dental Labs</title><meta name="description" content="ClearPro Tech pricing: $1,000/mo Base + $2.00/case. Discover how our AI scan routing delivers instant Margin Recovery for your dental lab."><link rel="icon" href="/assets/favicon.ico"><style>*{box-sizing:border-box}body{background:#0a0e14;color:#e6edf3;margin:0;font-family:'Inter', sans-serif;line-height:1.65}main{max-width:820px;margin:0 auto;padding:44px 22px;font-size:17px}h1,h2,h3,h4{color:#fff;line-height:1.25}h1{font-size:2rem;margin-top:0}main a{color:#4ea1ff}img{max-width:100%;height:auto}table{border-collapse:collapse;width:100%}th,td{border:1px solid #1c2733;padding:8px;text-align:left}</style><!-- themed-by-clearpro-v1 --></head><body><header style="background:#0a0e14;border-bottom:1px solid #1c2733;padding:16px 24px;overflow:hidden"><a href="https://clearprotech.com/" style="color:#fff;font-weight:700;font-size:18px;text-decoration:none;float:left">ClearPro Tech</a><nav style="float:right"><a href="https://clearprotech.com/" style="color:#9fb3c8;margin-left:18px;text-decoration:none">Home</a><a href="https://clearprotech.com/pricing.html" style="color:#9fb3c8;margin-left:18px;text-decoration:none">Pricing</a><a href="https://clearprotech.com/why-clearpro.html" style="color:#9fb3c8;margin-left:18px;text-decoration:none">Why ClearPro</a><a href="https://clearprotech.com/trust.html" style="color:#9fb3c8;margin-left:18px;text-decoration:none">Trust</a></nav></header><main><a href="/" class="logo">ClearPro Tech</a>
-        
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0e14">
+<meta name="color-scheme" content="dark">
+<title>Pricing | ClearPro Tech - Margin Recovery for Dental Labs</title>
+<meta name="description" content="ClearPro Tech pricing: Starter, Pro, and Enterprise tiers. AI scan routing for dental labs.">
+<link rel="icon" href="/assets/favicon.ico">
+<style>
+*{box-sizing:border-box}
+body{background:#0a0e14;color:#e6edf3;margin:0;font-family:'Inter', sans-serif;line-height:1.65}
+main{max-width:1000px;margin:0 auto;padding:44px 22px;font-size:17px}
+h1,h2,h3,h4{color:#fff;line-height:1.25}
+h1{font-size:2.5rem;text-align:center;margin-top:0;margin-bottom:12px}
+.hero p{text-align:center;color:#9fb3c8;margin-bottom:48px;font-size:1.1rem;max-width:700px;margin-left:auto;margin-right:auto;}
+main a{color:#4ea1ff}
+img{max-width:100%;height:auto}
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 64px;
+}
+.pricing-card {
+    background: #151d27;
+    border: 1px solid #1c2733;
+    border-radius: 12px;
+    padding: 32px;
+    flex: 1 1 300px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.pricing-card:hover {
+    transform: translateY(-5px);
+    border-color: #4ea1ff;
+}
+.pricing-card h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+.pricing-card.enterprise {
+    border: 2px solid #4ea1ff;
+    position: relative;
+    background: #111a24;
+}
+.badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4ea1ff;
+    color: #0a0e14;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 16px 0;
+}
+.price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #9fb3c8;
+}
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+    flex-grow: 1;
+}
+.features li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 28px;
+    color: #e6edf3;
+    font-size: 0.95rem;
+}
+.features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4ea1ff;
+    font-weight: bold;
+}
+.cta-button {
+    display: block;
+    text-align: center;
+    background: #4ea1ff;
+    color: #0a0e14 !important;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+    width: 100%;
+}
+.cta-button:hover {
+    background: #3b8cf2;
+    transform: translateY(-2px);
+}
+.pricing-card.enterprise .cta-button {
+    background: #4ea1ff;
+}
+.pricing-card:not(.enterprise) .cta-button {
+    background: #1c2733;
+    color: #fff !important;
+}
+.pricing-card:not(.enterprise) .cta-button:hover {
+    background: #2a3b4c;
+}
+.roi-section {
+    background: #151d27;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    border: 1px solid #1c2733;
+}
+.roi-section h2 {
+    margin-top: 0;
+}
+.roi-section p {
+    color: #9fb3c8;
+    max-width: 700px;
+    margin: 0 auto 24px;
+}
+</style>
+</head>
+<body>
+<header style="background:#0a0e14;border-bottom:1px solid #1c2733;padding:16px 24px;overflow:hidden">
+    <a href="https://clearprotech.com/" style="color:#fff;font-weight:700;font-size:18px;text-decoration:none;float:left">ClearPro Tech</a>
+    <nav style="float:right">
+        <a href="https://clearprotech.com/" style="color:#9fb3c8;margin-left:18px;text-decoration:none">Home</a>
+        <a href="https://clearprotech.com/pricing.html" style="color:#fff;margin-left:18px;text-decoration:none;font-weight:600">Pricing</a>
+        <a href="https://clearprotech.com/why-clearpro.html" style="color:#9fb3c8;margin-left:18px;text-decoration:none">Why ClearPro</a>
+        <a href="https://clearprotech.com/trust.html" style="color:#9fb3c8;margin-left:18px;text-decoration:none">Trust</a>
+    </nav>
+</header>
 
+<main>
     <section class="hero">
-        <h1>Transparent Pricing, Real Margin Recovery</h1>
-        <p>Stop losing money on manual scan intake. Automate your digital workflow and recover up to 15% in lost margins.</p>
+        <h1>Transparent, Scalable Pricing</h1>
+        <p>Automate your digital workflow and recover lost margins with AI. Choose the tier that best fits your lab's volume.</p>
     </section>
 
     <div class="pricing-container">
+        <!-- Starter Tier -->
         <div class="pricing-card">
-            <h2>ClearPro Platform</h2>
-            <div class="price">$1,000<span>/mo Base</span></div>
-            <div class="plus">+</div>
-            <div class="price">$2.00<span>/case</span></div>
-            
+            <h2>Starter</h2>
+            <div class="price">$99<span>/mo</span></div>
             <ul class="features">
-                <li>AI-Driven Scan Routing & Categorization</li>
-                <li>Automated Margin Line Prescreening</li>
-                <li>Unlimited User Seats</li>
-                <li>Seamless Dental LMS Integration</li>
-                <li>Real-time Margin Recovery Analytics</li>
+                <li><strong>50 AI calls/day</strong></li>
+                <li>AI-Driven Scan Routing</li>
+                <li>Automated Categorization</li>
+                <li>Standard Support</li>
             </ul>
-            
-            <a href="#roi-calculator" class="cta-button">Calculate Your Margin Recovery</a>
+            <a href="/contact" class="cta-button">Get Started</a>
+        </div>
+
+        <!-- Pro Tier -->
+        <div class="pricing-card">
+            <h2>Pro</h2>
+            <div class="price">$149<span>/mo</span></div>
+            <ul class="features">
+                <li><strong>200 AI calls/day</strong></li>
+                <li>Advanced Margin Line Prescreening</li>
+                <li>Seamless Dental LMS Integration</li>
+                <li>Priority Support</li>
+            </ul>
+            <a href="/contact" class="cta-button">Get Pro</a>
+        </div>
+
+        <!-- Enterprise Tier -->
+        <div class="pricing-card enterprise">
+            <div class="badge">Best Value for High-Volume Labs</div>
+            <h2>Enterprise</h2>
+            <div class="price">$299<span>/mo</span></div>
+            <ul class="features">
+                <li><strong>500 AI calls/day</strong></li>
+                <li>Real-time Margin Recovery Analytics</li>
+                <li>Unlimited User Seats</li>
+                <li>Dedicated Account Manager</li>
+                <li>Custom API Integrations</li>
+            </ul>
+            <a href="/contact" class="cta-button">Contact Sales</a>
         </div>
     </div>
 
     <section id="roi-calculator" class="roi-section">
         <div class="roi-content">
             <h2>The Margin Recovery Promise</h2>
-            <p>Manual dental scan intake is a silent margin killer. Between wasted technician time, fixing errors, and dealing with downstream remakes, labs lose a significant percentage of their potential profit. Our $1k + $2 pricing model ensures that you only scale costs as your volume grows, while instantly capturing margin recovery from day one.</p>
+            <p>Manual dental scan intake is a silent margin killer. Between wasted technician time, fixing errors, and dealing with downstream remakes, labs lose a significant percentage of their potential profit. Our new tiered model ensures that you only scale costs as your volume grows, while instantly capturing margin recovery from day one.</p>
             <p><strong>Ready to see how much you could save?</strong></p>
-            <a href="/contact" class="cta-button" style="width: auto; padding: 1rem 3rem;">Schedule a ROI Consultation</a>
+            <a href="/contact" class="cta-button" style="display:inline-block; width: auto; padding: 12px 32px; background: #4ea1ff; color: #0a0e14 !important;">Schedule a ROI Consultation</a>
         </div>
-    </section></main><footer style="background:#0a0e14;border-top:1px solid #1c2733;padding:28px 24px;margin-top:56px;color:#9fb3c8;font-size:14px;text-align:center"><p style="margin:0 0 8px">(c) 2026 ClearPro Tech LLC — <a href="https://clearprotech.com/" style="color:#4ea1ff;text-decoration:none">clearprotech.com</a></p><p style="margin:0"><a href="https://clearprotech.com/" style="color:#9fb3c8;margin:0 8px;text-decoration:none">Home</a><a href="https://clearprotech.com/pricing.html" style="color:#9fb3c8;margin:0 8px;text-decoration:none">Pricing</a><a href="https://clearprotech.com/audit.html" style="color:#9fb3c8;margin:0 8px;text-decoration:none">Free Audit</a></p></footer></body></html>
+    </section>
+</main>
+
+<footer style="background:#0a0e14;border-top:1px solid #1c2733;padding:28px 24px;margin-top:56px;color:#9fb3c8;font-size:14px;text-align:center">
+    <p style="margin:0 0 8px">&copy; 2026 ClearPro Tech LLC — <a href="https://clearprotech.com/" style="color:#4ea1ff;text-decoration:none">clearprotech.com</a></p>
+    <p style="margin:0">
+        <a href="https://clearprotech.com/" style="color:#9fb3c8;margin:0 8px;text-decoration:none">Home</a>
+        <a href="https://clearprotech.com/pricing.html" style="color:#9fb3c8;margin:0 8px;text-decoration:none">Pricing</a>
+        <a href="https://clearprotech.com/audit.html" style="color:#9fb3c8;margin:0 8px;text-decoration:none">Free Audit</a>
+    </p>
+</footer>
+</body>
+</html>
